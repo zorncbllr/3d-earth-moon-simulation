@@ -63,7 +63,7 @@ class Earth extends THREE.Mesh {
   }
 
   public handleAnimation() {
-    this.rotateY(-0.0006);
+    this.rotateY(-0.003);
     this.children[1].rotateY(-0.001);
   }
 }

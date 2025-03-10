@@ -31,15 +31,11 @@ const ambientLight = new THREE.AmbientLight(0x888888, 0.2);
 scene.add(spotLight);
 scene.add(ambientLight);
 
-const group = new THREE.Group();
-
 const earth = new Earth();
 const moon = new Moon();
 
-group.add(earth);
-group.add(moon);
-
-scene.add(group);
+scene.add(earth);
+scene.add(moon);
 
 addStars(scene);
 
@@ -58,7 +54,6 @@ function animate() {
 
   earth.handleAnimation();
   moon.handleAnimation();
-  group.rotateY(0.005);
 
   controller.update();
 
