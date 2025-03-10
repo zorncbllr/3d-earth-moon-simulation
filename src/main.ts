@@ -14,7 +14,7 @@ renderer.setSize(width, height);
 
 document.body.append(renderer.domElement);
 
-const camera = new THREE.PerspectiveCamera(74, width / height, 0.1, 10);
+const camera = new THREE.PerspectiveCamera(74, width / height, 0.1, 50);
 camera.position.z = 5;
 
 const scene = new THREE.Scene();

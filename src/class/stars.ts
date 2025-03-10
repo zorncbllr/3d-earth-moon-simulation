@@ -13,13 +13,13 @@ class Star extends THREE.Mesh {
   }
 
   private randomizePosition() {
-    this.position.x = (Math.random() - 0.5) * 10;
-    this.position.y = (Math.random() - 0.5) * 10;
+    this.position.x = (Math.random() - 0.5) * 30;
+    this.position.y = (Math.random() - 0.5) * 30;
     this.position.z = (Math.random() - 0.5) * 30;
   }
 }
 
-function addStars(scene: THREE.Scene, count: number = 1000) {
+function addStars(scene: THREE.Scene, count: number = 2000) {
   for (let i = 0; i < count; i++) {
     const star = new Star();
     scene.add(star);
