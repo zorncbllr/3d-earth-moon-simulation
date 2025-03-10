@@ -2,8 +2,9 @@ import "./index.css";
 
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/Addons.js";
-import Earth from "./earth";
-import Moon from "./moon";
+import Earth from "./class/earth";
+import Moon from "./class/moon";
+import { addStars } from "./class/stars";
 
 let width = window.innerWidth;
 let height = window.innerHeight;
@@ -28,6 +29,7 @@ spotLight.position.set(-5, 2, 2);
 const ambientLight = new THREE.AmbientLight(0x888888, 0.2);
 
 scene.add(spotLight);
+scene.add(ambientLight);
 
 const group = new THREE.Group();
 
@@ -37,8 +39,9 @@ const moon = new Moon();
 group.add(earth);
 group.add(moon);
 
-scene.add(ambientLight);
 scene.add(group);
+
+addStars(scene);
 
 window.addEventListener("resize", (_) => {
   width = window.innerWidth;
